@@ -1,0 +1,57 @@
+question 5
+
+import random
+with open("a.txt",'w') as f:
+    l=[]
+    for i in range(10):
+        l.append(random.randint(0, 9))
+    for i in l:
+        f.write(str(i))
+        f.write("\n")
+with open("a.txt", 'r') as f:
+    list = f.readlines()
+    list.sort()
+    with open("b.txt", 'w') as f1:
+        for i in list:
+            f1.write(str(i))
+            f1.write("\n")
+with open("a.txt") as f:
+    d=f.read()
+    print(d)
+with open("b.txt") as f:
+    d=f.read()
+    print(d)
+
+output
+
+2
+6
+9
+0
+1
+2
+7
+2
+9
+0
+
+0
+
+0
+
+1
+
+2
+
+2
+
+2
+
+6
+
+7
+
+9
+
+9
+
